@@ -1,4 +1,4 @@
-name: Hello
+name: Hello Workflow
 
 # runs on a trigger
 on:
@@ -13,14 +13,14 @@ jobs:
     # this is github runner, each job runs on a runner
     runs-on: ubuntu-latest
     steps:
-      - name: say hello to users
-        run: echo "Hello Dosto"
+      - name: Check code
+        uses: actions/checkout@v4
 
-      - name: say hello to username
-        run: echo "Hello $USER"
+      - name: Print message
+        uses: actions/checkout@v4
 
-  details:
-    runs-on: ubuntu-latest
-    steps:
-      - name: version of python, docker, etc
-        run: docker --version && python --version
+  # details:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: version of python, docker, etc
+  #       run: docker --version && python --version
