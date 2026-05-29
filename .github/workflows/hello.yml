@@ -31,8 +31,8 @@ jobs:
       - name: Print Runner OS
         run: echo "Runner OS is $RUNNER_OS"
 
-      - name: Intentional Failure
-        run: exit 1
+      - name: Fixed Step
+        run: echo "Pipeline Fixed"
 
   # details:
   #   runs-on: ubuntu-latest
