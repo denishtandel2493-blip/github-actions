@@ -17,7 +17,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Print Hello message
-        uses: actions/checkout@v4
+        run: echo "Hello from GitHub Actions!"
 
       - name: Print Current Date and Time
         run: date
@@ -30,6 +30,9 @@ jobs:
 
       - name: Print Runner OS
         run: echo "Runner OS is $RUNNER_OS"
+
+      - name: Intentional Failure
+        run: exit 1
 
   # details:
   #   runs-on: ubuntu-latest
