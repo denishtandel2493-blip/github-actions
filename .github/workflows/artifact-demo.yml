@@ -1,0 +1,21 @@
+name: Artifact Demo
+
+on:
+    push:
+    
+jobs:
+    generate-report:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Create Test Report
+              run: |
+                echo "Test Report" > report.txt
+                echo "All tests passed" >> report.txt
+                echo "Generated on $(date)" >> report.txt
+
+            - name: Upload Report
+              uses: actions/upload-artifact@v4
+              with:
+                name: test-report
+                path: report.txt
